@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Admin Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Portfolio Admin Dashboard</h1>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="messageTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+<!-- Message Modal -->
+<div id="messageModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2>📩 Message Details</h2>
+
+        <p><strong>Name:</strong> <span id="modalName"></span></p>
+        <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+        <p><strong>Subject:</strong> <span id="modalSubject"></span></p>
+        <p><strong>Date:</strong> <span id="modalDate"></span></p>
+
+        <hr>
+
+        <p id="modalMessage"></p>
+
+        <br>
+
+        <button id="replyBtn">Reply</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

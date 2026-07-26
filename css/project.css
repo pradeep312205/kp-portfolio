@@ -1,0 +1,832 @@
+/*=========================================
+  PROJECT PAGE CSS
+  Part 1 : Global + Hero + Buttons
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#081220;
+    color:#ffffff;
+    overflow-x:hidden;
+    line-height:1.7;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:100px 10%;
+
+}
+
+/*========================
+SECTION TITLE
+=========================*/
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    color:#b8c5d3;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+
+}
+
+.section-title::after{
+
+    content:"";
+    width:90px;
+    height:4px;
+    background:#2563eb;
+    display:block;
+    margin:18px auto;
+    border-radius:50px;
+
+}
+
+/*========================
+PROJECT HERO
+=========================*/
+
+/*========================
+PROJECT HERO
+=========================*/
+
+.project-hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(8,18,32,.82),
+        rgba(8,18,32,.90)
+    ),
+    url("../images/hero2.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(37,99,235,.18),
+        rgba(8,18,32,.25)
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    padding:20px;
+
+}
+
+.hero-content h5{
+
+    color:#60a5fa;
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.hero-content h1{
+
+    font-size:68px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+    color:#dbe7f5;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    max-width:750px;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/*========================
+BUTTONS
+=========================*/
+
+.hero-buttons,
+.project-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border-radius:35px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.35);
+
+}
+
+.btn-outline{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    border:2px solid #2563eb;
+
+    color:#ffffff;
+
+    border-radius:35px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn-outline:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-5px);
+
+}
+
+/*========================
+PROJECT SECTION
+=========================*/
+
+.projects{
+
+    background:#081220;
+
+}
+
+.projects .section-title{
+
+    margin-bottom:80px;
+
+}/* Premium project.css placeholder generated */
+/*=========================================
+  PROJECT PAGE CSS
+  Part 2 : Project Cards
+==========================================*/
+
+.project-card{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+    background:#101b2d;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    margin-bottom:70px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s ease;
+
+    overflow:hidden;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563eb;
+
+    box-shadow:0 20px 40px rgba(37,99,235,.25);
+
+}
+
+.project-card.reverse{
+
+    direction:rtl;
+
+}
+
+.project-card.reverse .project-content{
+
+    direction:ltr;
+
+}
+
+/*==========================
+PROJECT IMAGE
+==========================*/
+
+.project-image{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.project-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    transition:.5s;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*==========================
+PROJECT CONTENT
+==========================*/
+
+.project-content span{
+
+    display:inline-block;
+
+    color:#60a5fa;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.project-content h2{
+
+    font-size:36px;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+}
+
+.project-content p{
+
+    color:#d6dbe6;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+/*==========================
+PROJECT DETAILS
+==========================*/
+
+.project-details{
+
+    margin:25px 0;
+
+}
+
+.project-details p{
+
+    margin:10px 0;
+
+    color:#d6dbe6;
+
+}
+
+.project-details strong{
+
+    color:#60a5fa;
+
+}
+
+/*==========================
+FEATURE LIST
+==========================*/
+
+.project-content h4{
+
+    color:#60a5fa;
+
+    margin-top:25px;
+
+    margin-bottom:15px;
+
+}
+
+.project-content ul{
+
+    padding-left:20px;
+
+}
+
+.project-content li{
+
+    margin-bottom:10px;
+
+    color:#d6dbe6;
+
+}
+
+/*==========================
+TECH TAGS
+==========================*/
+
+.tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:25px;
+
+    margin-bottom:30px;
+
+}
+
+.tech span{
+
+    background:#1a2942;
+
+    color:#60a5fa;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+    border:1px solid rgba(96,165,250,.2);
+
+}
+
+.tech span:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    transform:translateY(-3px);
+
+}
+
+/*==========================
+PROJECT BUTTONS
+==========================*/
+
+.project-buttons{
+
+    justify-content:flex-start;
+
+    margin-top:25px;
+
+}
+
+.project-buttons .btn{
+
+    min-width:150px;
+
+    text-align:center;
+
+}
+
+.project-buttons .btn-outline{
+
+    min-width:150px;
+
+    text-align:center;
+
+}
+
+/*==========================
+SMALL ANIMATION
+==========================*/
+
+.project-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*=========================================
+  PROJECT PAGE CSS
+  Part 3 : Statistics + Tech Stack + Process + CTA
+==========================================*/
+
+/*==========================
+PROJECT STATISTICS
+==========================*/
+
+.project-stats{
+
+    background:#0d1728;
+
+}
+
+.stats-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.stat-box{
+
+    background:#101b2d;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563eb;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+
+}
+
+.stat-box i{
+
+    font-size:45px;
+
+    color:#60a5fa;
+
+    margin-bottom:20px;
+
+}
+
+.stat-box h2{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+    color:#ffffff;
+
+}
+
+.stat-box p{
+
+    color:#cbd5e1;
+
+}
+
+/*==========================
+TECH STACK
+==========================*/
+
+.technology-stack{
+
+    background:#081220;
+
+}
+
+.tech-stack-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:30px;
+
+}
+
+.stack-card{
+
+    background:#101b2d;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.stack-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563eb;
+
+}
+
+.stack-card i{
+
+    font-size:55px;
+
+    color:#60a5fa;
+
+    margin-bottom:20px;
+
+}
+
+.stack-card h3{
+
+    color:#ffffff;
+
+    font-size:20px;
+
+}
+
+/*==========================
+DEVELOPMENT PROCESS
+==========================*/
+
+.development-process{
+
+    background:#0d1728;
+
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.process-card{
+
+    background:#101b2d;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563eb;
+
+}
+
+.process-card i{
+
+    font-size:55px;
+
+    color:#60a5fa;
+
+    margin-bottom:20px;
+
+}
+
+.process-card h3{
+
+    margin-bottom:15px;
+
+    color:#ffffff;
+
+}
+
+.process-card p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+CALL TO ACTION
+==========================*/
+
+.project-contact{
+
+    text-align:center;
+
+    padding:90px 10%;
+
+    background:linear-gradient(135deg,#1d4ed8,#2563eb);
+
+    border-radius:25px;
+
+    margin:100px 10%;
+
+}
+
+.project-contact h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.project-contact p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+    font-size:18px;
+
+    color:#eef4ff;
+
+}
+
+.project-contact .project-buttons{
+
+    justify-content:center;
+
+}

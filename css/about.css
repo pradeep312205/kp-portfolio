@@ -1,0 +1,621 @@
+/* ==========================================
+   ABOUT PAGE
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#081220;
+    color:#ffffff;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.about-hero{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:120px auto 80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+
+}
+
+.about-image{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+}
+
+.about-image img{
+
+    width:380px;
+    height:480px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:3px solid #2563eb;
+
+    transition:.4s;
+
+}
+
+.about-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.about-content{
+
+    flex:1;
+
+}
+
+.about-content h5{
+
+    color:#60a5fa;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+}
+
+.about-content h1{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.about-content h2{
+
+    color:#60a5fa;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+.about-content p{
+
+    color:#cbd5e1;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+
+}
+
+.btn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.btn-outline{
+
+    border:2px solid #2563eb;
+
+    color:#60a5fa;
+
+    padding:15px 35px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn-outline:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ==========================================
+   COMMON SECTION
+========================================== */
+
+section{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:100px auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    color:#ffffff;
+
+    position:relative;
+
+}
+
+.section-title h2::after{
+
+    content:"";
+
+    width:80px;
+
+    height:4px;
+
+    background:#2563eb;
+
+    display:block;
+
+    margin:15px auto;
+
+    border-radius:20px;
+
+}
+/* ==========================================
+   WHO I AM
+========================================== */
+
+.about{
+
+    text-align:center;
+
+}
+
+.about p{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+/* ==========================================
+   JOURNEY
+========================================== */
+
+.journey{
+
+    position:relative;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding-left:40px;
+
+    border-left:3px solid #2563eb;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:60px;
+
+}
+
+.timeline-item:last-child{
+
+    margin-bottom:0;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-51px;
+
+    top:8px;
+
+    width:18px;
+
+    height:18px;
+
+    background:#2563eb;
+
+    border-radius:50%;
+
+    border:4px solid #081220;
+
+}
+
+.timeline-item h3{
+
+    color:#60a5fa;
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+}
+
+.timeline-item p{
+
+    color:#cbd5e1;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   WHAT I DO
+========================================== */
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px 80px;
+
+    margin-top:40px;
+
+}
+
+.service-grid div{
+
+    text-align:left;
+
+    transition:.35s ease;
+
+}
+
+.service-grid div:hover{
+
+    transform:translateX(10px);
+
+}
+
+.service-grid i{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+    margin-bottom:18px;
+
+}
+
+.service-grid h3{
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.service-grid p{
+
+    color:#94a3b8;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    width:100%;
+
+    padding:40px 20px;
+
+    margin-top:100px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer p{
+
+    color:#94a3b8;
+
+    font-size:16px;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+   SCROLL ANIMATION
+========================================== */
+
+.about-hero,
+.about,
+.journey,
+.services{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   IMAGE EFFECT
+========================================== */
+
+.about-image img{
+
+    transition:.4s ease;
+
+}
+
+.about-image img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 35px rgba(37,99,235,.45);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1100px){
+
+.about-hero{
+
+    gap:40px;
+
+}
+
+.about-content h1{
+
+    font-size:48px;
+
+}
+
+.about-image img{
+
+    width:320px;
+
+    height:420px;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.about-hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.timeline{
+
+    padding-left:30px;
+
+}
+
+.service-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.about-content h1{
+
+    font-size:40px;
+
+}
+
+.about-content h2{
+
+    font-size:22px;
+
+}
+
+.about-content p{
+
+    font-size:16px;
+
+}
+
+.about-image img{
+
+    width:260px;
+
+    height:340px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero-buttons a{
+
+    width:220px;
+
+    text-align:center;
+
+}
+
+.section-title h2{
+
+    font-size:34px;
+
+}
+
+.about p{
+
+    font-size:16px;
+
+}
+
+.timeline-item h3{
+
+    font-size:24px;
+
+}
+
+.timeline-item p{
+
+    font-size:16px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.about-content h1{
+
+    font-size:32px;
+
+}
+
+.about-content h2{
+
+    font-size:18px;
+
+}
+
+.about-image img{
+
+    width:220px;
+
+    height:290px;
+
+}
+
+.hero-buttons a{
+
+    width:100%;
+
+}
+
+}
