@@ -3,7 +3,7 @@ const table = document.getElementById("messageTable");
 // Load all messages
 async function loadMessages() {
     try {
-        const response = await fetch("http://localhost:5000/api/admin/messages");
+        const response = await fetch("https://kp-portfolio-backend.onrender.com/api/admin/messages");
         const messages = await response.json();
 
         table.innerHTML = "";
@@ -36,7 +36,7 @@ async function loadMessages() {
 // View message
 async function viewMessage(id) {
 
-    const response = await fetch(`http://localhost:5000/api/admin/message/${id}`);
+    const response = await fetch(`https://kp-portfolio-backend.onrender.com/api/admin/message/${id}`);
 
     const data = await response.json();
 
@@ -62,7 +62,7 @@ async function deleteMessage(id) {
 
     if (!confirm("Delete this message?")) return;
 
-    await fetch(`http://localhost:5000/api/admin/message/${id}`, {
+    await fetch(`https://kp-portfolio-backend.onrender.com/api/admin/message/${id}`,  {
         method: "DELETE"
     });
 
