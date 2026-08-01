@@ -1,72 +1,57 @@
-/* ===============================
-   Tablet (992px and below)
-================================= */
+/* Mobile */
+@media (max-width:768px){
 
-@media (max-width: 992px){
-
-    nav{
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-
-    nav ul{
-        margin: 20px 0;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero{
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .about{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-container{
-        grid-template-columns: 1fr;
-    }
-
-    .education-container{
-        grid-template-columns: 1fr;
-    }
+nav{
+    flex-direction:column;
+    height:auto;
+    padding:15px;
 }
 
-/* ===============================
-   Mobile (768px and below)
-================================= */
+nav ul{
+    flex-direction:column;
+    gap:15px;
+    margin:20px 0;
+}
 
-@media (max-width: 768px){
+.hero-container,
+.about,
+.about-hero,
+.contact-container,
+.project-card,
+.project-card.reverse{
+    flex-direction:column;
+    display:flex;
+}
 
-    .hero-text h1{
-        font-size: 42px;
-    }
+.hero-left,
+.hero-right,
+.about-image,
+.about-content{
+    width:100%;
+    text-align:center;
+}
 
-    .hero-text h2{
-        font-size: 26px;
-    }
+.hero-left h1,
+.hero-content h1{
+    font-size:42px !important;
+}
 
-    .hero-image img{
-        width: 250px;
-        height: 250px;
-    }
+.hero-left h2,
+.hero-content h2{
+    font-size:22px !important;
+}
 
-    .about-info{
-        grid-template-columns: 1fr;
-    }
+.skills-container,
+.skills-grid,
+.experience-grid,
+.course-grid,
+.tool-grid,
+.projects{
+    grid-template-columns:1fr !important;
+}
 
-    .skills-container{
-        grid-template-columns: 1fr;
-    }
-
-    .projects-container{
-        grid-template-columns: 1fr;
-    }
-
-    button{
-        width: 100%;
-    }
+img{
+    max-width:100%;
+    height:auto;
+}
 }
