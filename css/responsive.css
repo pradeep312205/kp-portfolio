@@ -1,57 +1,467 @@
-/* Mobile */
-@media (max-width:768px){
+/* Shared layout refinements for every portfolio page. */
 
-nav{
-    flex-direction:column;
-    height:auto;
-    padding:15px;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
 }
 
-nav ul{
-    flex-direction:column;
-    gap:15px;
-    margin:20px 0;
+body {
+    min-width: 320px;
+    overflow-x: clip;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+section,
+article,
+main,
+footer,
+header,
+nav,
+form {
+    min-width: 0;
+}
+
+/* Keep the home page's full-screen hero separate from its fixed navigation. */
+body > header.hero {
+    position: relative;
+    min-height: 100svh;
+    height: auto;
+    margin-top: -80px;
+    padding: 0;
+    overflow: visible;
+}
+
+body > header.hero > .navbar {
+    position: static;
+    padding: 0;
+}
+
+body > header.hero > .navbar > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+body > header.hero > .hero-container {
+    min-height: 100svh;
+    padding-top: 80px;
 }
 
 .hero-container,
-.about,
 .about-hero,
 .contact-container,
-.project-card,
-.project-card.reverse{
-    flex-direction:column;
-    display:flex;
+.input-box,
+.footer-container,
+.education-container,
+.projects-container,
+.experience-grid,
+.skills-grid,
+.course-grid,
+.certificate-grid,
+.responsibility-grid,
+.tool-grid,
+.tech-grid,
+.highlight-grid,
+.service-grid {
+    min-width: 0;
 }
 
+.projects-container,
+.education-container,
+.experience-grid,
+.skills-grid,
+.course-grid,
+.certificate-grid,
+.responsibility-grid,
+.tool-grid,
+.tech-grid,
+.highlight-grid,
+.service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+}
+
+.hero-content,
 .hero-left,
 .hero-right,
-.about-image,
-.about-content{
-    width:100%;
-    text-align:center;
+.about-content,
+.contact-info,
+.contact-form,
+.project-content,
+.education-content,
+.experience-card,
+.skill-card,
+.skill-box,
+.course-card,
+.certificate-card,
+.responsibility-card,
+.tool-card,
+.tech-box,
+.highlight-card,
+.objective-card,
+.info-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
-.hero-left h1,
-.hero-content h1{
-    font-size:42px !important;
+.hero-content {
+    width: min(100%, 850px);
+    margin-inline: auto;
+    padding-inline: 20px;
 }
 
-.hero-left h2,
-.hero-content h2{
-    font-size:22px !important;
+.about-image img,
+.hero-right img {
+    max-width: 100%;
 }
 
-.skills-container,
-.skills-grid,
-.experience-grid,
-.course-grid,
-.tool-grid,
-.projects{
-    grid-template-columns:1fr !important;
+.project-buttons,
+.hero-buttons,
+.social-icons,
+.social-links {
+    flex-wrap: wrap;
 }
 
-img{
-    max-width:100%;
-    height:auto;
+input,
+textarea,
+select,
+button {
+    max-width: 100%;
 }
+
+@media (max-width: 900px) {
+    body {
+        padding-top: 144px;
+    }
+
+    header:not(.hero) {
+        padding: 8px 0;
+    }
+
+    nav {
+        width: 94%;
+        height: auto;
+        min-height: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 12px;
+        padding: 4px 0;
+    }
+
+    nav > ul,
+    nav > .nav-links {
+        order: 3;
+        display: flex;
+        flex: 1 0 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        margin: 0;
+        padding: 2px 0;
+    }
+
+    body > header.hero {
+        margin-top: -144px;
+        padding-top: 130px;
+    }
+
+    body > header.hero > .hero-container {
+        min-height: 0;
+        padding-top: 48px;
+    }
+}
+
+@media (max-width: 1100px) {
+    nav {
+        width: 94%;
+    }
+
+    nav ul,
+    .nav-links {
+        gap: clamp(10px, 1.8vw, 22px);
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .resume-btn {
+        padding: 11px 18px;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .education,
+    .experience,
+    .contact {
+        width: 92%;
+        padding: clamp(30px, 5vw, 60px);
+    }
+
+    .hero-container {
+        gap: clamp(24px, 5vw, 60px);
+    }
+
+    .hero-left h1 {
+        font-size: clamp(48px, 7vw, 76px);
+    }
+
+    .hero-left h2 {
+        font-size: clamp(26px, 3.4vw, 38px);
+    }
+
+    .hero-right img {
+        width: min(38vw, 420px);
+        height: min(38vw, 420px);
+    }
+}
+
+@media (max-width: 760px) {
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    body {
+        padding-top: 144px;
+    }
+
+    header:not(.hero) {
+        padding: 10px 0;
+    }
+
+    nav {
+        width: 94%;
+        height: auto;
+        min-height: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 12px;
+        padding: 4px 0;
+    }
+
+    nav > ul,
+    nav > .nav-links {
+        order: 3;
+        display: flex;
+        flex: 1 0 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        margin: 0;
+        padding: 2px 0;
+    }
+
+    nav ul li a,
+    .nav-links a {
+        display: inline-block;
+        padding: 4px 0;
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .logo,
+    .logo span {
+        font-size: 1.45rem;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .resume-btn {
+        display: inline-block;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    body > header.hero {
+        min-height: 0;
+        margin-top: -144px;
+        padding-top: 130px;
+    }
+
+    body > header.hero > .navbar > header {
+        padding: 8px 0;
+    }
+
+    body > header.hero > .hero-container {
+        min-height: 0;
+        padding: 48px 0 56px;
+    }
+
+    .hero-container,
+    .about-hero {
+        width: min(92%, 620px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-left h1,
+    .hero-content h1 {
+        width: 100%;
+        max-width: 100%;
+        margin-inline: auto;
+        font-size: clamp(30px, 8vw, 44px);
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-left h2,
+    .hero-content h2 {
+        font-size: clamp(21px, 6vw, 30px);
+        line-height: 1.4;
+    }
+
+    .hero-left h4,
+    .hero-content h5 {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .hero-left p,
+    .hero-content p {
+        width: auto;
+        max-width: 100%;
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-right {
+        justify-content: center;
+    }
+
+    .hero-right img {
+        width: min(72vw, 300px);
+        height: min(72vw, 300px);
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-buttons a,
+    .project-buttons a {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .education,
+    .experience,
+    .contact {
+        width: 92%;
+        margin: 32px auto;
+        padding: clamp(22px, 6vw, 38px);
+        border-radius: 20px;
+    }
+
+    section {
+        padding: 64px 6%;
+    }
+
+    .about,
+    .contact-container {
+        flex-direction: column;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .about-info,
+    .input-box,
+    .footer-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-image img {
+        width: min(72vw, 320px);
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .section-title,
+    .section-title h2,
+    .about-content h1,
+    .about-content h2 {
+        font-size: clamp(28px, 7vw, 40px);
+    }
+
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form {
+        padding: clamp(20px, 5vw, 34px);
+    }
+
+    .contact-form button,
+    form button {
+        width: 100%;
+    }
+
+    .experience-hero,
+    .contact-hero,
+    .project-hero,
+    .education-hero,
+    .skills-hero {
+        min-height: 72svh;
+        height: auto;
+        padding: 64px 6%;
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 420px) {
+    nav > ul,
+    nav > .nav-links {
+        column-gap: 11px;
+    }
+
+    nav ul li a,
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .resume-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .education-card,
+    .experience-card,
+    .skill-card,
+    .skill-box,
+    .course-card,
+    .certificate-card,
+    .objective-card {
+        padding: 22px;
+    }
 }
